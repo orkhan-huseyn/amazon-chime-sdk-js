@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Fixed
+- Fixed Firefox video tiles containing stale frames from previous transceivers by not attempting to reuse inactive transceivers. This switches to using `RTCRtpTransceiver.stop` when possible and may fix other incorrect tile bugs.
 
 ### Changed
 - Clarified comment in `DefaultSimulcastUplinkPolicy`.

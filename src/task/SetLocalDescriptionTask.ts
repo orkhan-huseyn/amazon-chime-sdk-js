@@ -38,6 +38,7 @@ export default class SetLocalDescriptionTask extends BaseTask {
       // if we confirm support/negotiation via `RTCRtpTranceiver.sender.getParams`
       sdp = new DefaultSDP(sdp).withVideoLayersAllocationRtpHeaderExtension().sdp;
     }
+
     if (new DefaultBrowserBehavior().requiresDisablingH264Encoding()) {
       sdp = new DefaultSDP(sdp).removeH264SupportFromSendSection().sdp;
     }
